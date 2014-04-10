@@ -138,7 +138,7 @@ The workflow is quite simple:
   * ThreadInterface $thread 
   * ActorInterface $actor 
   * string $text
-	* int $timestamp 
+  * int $timestamp 
 
  ```php
 	$messageRepository = new Softservlet\Forum\Repositories\MessageRepository();
