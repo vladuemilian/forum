@@ -7,6 +7,12 @@ to use the package for problems such as private messages
 between your users or a place where all your users
 can write their ideas.
 
+### About 
+This package was intended to be used as a storage sollution
+for messages in a application with instant messages chat
+delivered through websockets. The websocket server at 
+some moment will save the conversation using this package.
+
 ### Installation
 
 Currently only a installation guide for Laravel 4 framework
@@ -96,9 +102,42 @@ then register the binding from this class to
 More about Laravel binding on Laravel documentation.
 
 
+### How it works
+
+The workflow is quite simple:
+
+ * An actor sends a message to a Thread
+ * All actors which written or subscribed to that thread
+ can fetch messages.
+
 ### How to use
 
+ * First thing when you want to send a message using
+ package is to define who will send it. As we've 
+ seen above, you need to implement `ActorRepositoryInterface`.
+ Create an instance of an ActorInterface
+ ```php
+	$actorRepository = new ActorRepository(); //this object will implements ActorRepositoryInterface
+	
+	//let's say that we want to send a message from a user with id equals with 1
+	$actor = $actorRepository->find(1); 
+ ```
 
+ * Create a thread(if not exists) where the message will 
+ be sent.
+ ```php
+	$threadRepository = new Softservlet\Forum\Repositories\ThreadRepository();
+	//create a instance of a thread with id equals with 10
+	$thread = $threadRepository->find(10);
+ ```
 
+ * Create the message object. To create a message object, 
+ you'll need to pass next variables as constructor:
+		* $actor
+		* $thread
+		* test
+ ```php
+
+ ```
 
 
