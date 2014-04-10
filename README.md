@@ -146,4 +146,10 @@ The workflow is quite simple:
 	$messageRepository = new Softservlet\Forum\Repositories\MessageRepository();
 	$message = $messageRepository->create($thread, $actor, "my message", time());
  ```
+#### Getting messages and threads
 
+Todo
+
+#### Send messages with another data than strings
+
+Todo
