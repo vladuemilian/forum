@@ -117,8 +117,9 @@ The workflow is quite simple:
  seen above, you need to implement `ActorRepositoryInterface`.
  Create an instance of an ActorInterface
  ```php
-	$actorRepository = new ActorRepository(); //this object will implements ActorRepositoryInterface
-	
+	//this object will implements ActorRepositoryInterface
+	$actorRepository = new ActorRepository(); 	
+
 	//let's say that we want to send a message from a user with id equals with 1
 	$actor = $actorRepository->find(1); 
  ```
