@@ -112,6 +112,8 @@ The workflow is quite simple:
 
 ## How to use
 
+#### Creating messages and threads
+
  * First thing when you want to send a message using
  package is to define who will send it. As we've 
  seen above, you need to implement `ActorRepositoryInterface`.
