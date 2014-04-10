@@ -131,14 +131,16 @@ The workflow is quite simple:
 	$thread = $threadRepository->find(10);
  ```
 
- * Create the message object. To create a message object, 
- you'll need to pass next variables as constructor:
-  * $actor
-  * $thread
-  * test
+ * Create a new message. Messages creation are done by MessageRepository object,
+ defined in `Repositories\MessageRepository` class. Create a instance of this object
+ and call `create()` method with the parameters described bellow:
+  * ThreadInterface $thread 
+  * ActorInterface $actor 
+  * string $text
+	* int $timestamp 
 
  ```php
-
+	$messageRepository = new Softservlet\Forum\Repositories\MessageRepository();
+	$message = $messageRepository->create($thread, $actor, "my message", time());
  ```
-
 
