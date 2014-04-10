@@ -133,9 +133,9 @@ The workflow is quite simple:
 
  * Create the message object. To create a message object, 
  you'll need to pass next variables as constructor:
- ** $actor
- ** $thread
- ** test
+_ $actor
+_ $thread
+_ test
  ```php
 
  ```
