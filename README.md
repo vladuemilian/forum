@@ -102,7 +102,7 @@ then register the binding from this class to
 More about Laravel binding on Laravel documentation.
 
 
-### How it works
+## How it works
 
 The workflow is quite simple:
 
@@ -110,7 +110,7 @@ The workflow is quite simple:
  * All actors which written or subscribed to that thread
  can fetch messages.
 
-### How to use
+## How to use
 
  * First thing when you want to send a message using
  package is to define who will send it. As we've 
